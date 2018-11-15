@@ -7,16 +7,86 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Eval Layout</title>
-		<link rel="stylesheet" href="css/style.css">
+		<style>
+			/*Vue Big Desktop*/
+			@media only screen and (min-width:1370px){
+				.telephone, .desktop, .tablette{
+					display: none;
+				}
+				.desktopG{
+					display: block;
+				}
+				.image{
+					width: 20%;
+				}
+			}
+			/*Vue Desktop*/
+			@media only screen and (min-width:971px) and (max-width: 1369px){
+				body{
+					padding: 0 10%;
+				}
+				.telephone, .tablette, .desktopG{
+					display: none;
+				}
+				.desktop{
+					display: block;
+				}
+				.image{
+					width: 46%;
+				}
+			}
+			/*Vue Tablette*/
+			@media only screen and (min-width:768px) and (max-width: 970px){
+				.telephone, .desktop, .desktopG{
+					display: none;
+				}
+				.tablette{
+					display: block;
+				}
+				.image{
+					width: 46%;
+				}
+			}
+			/*Vue Telephone*/
+			h1, h2{
+				text-align: center;
+			}
+			.tablette, .desktop, .desktopG{
+				display: none;
+			}
+			.box{
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+			}
+			.image{
+				padding: 1%;
+			}
+			img{
+				width: 100%;
+				height: auto;
+			}
+		</style>
 	</head>
 	<body>
 		<h1 class="txtcenter">Evaluation  Layout</h1>
-		<h2 class="desktopG txtcenter">Vue Desktop > 1370px</h2>
-		<h2 class="desktop txtcenter">Vue Desktop</h2>
-		<h2 class="tablette txtcenter">Vue Tablette à 768px à 970px</h2>
-		<h2 class="telephone txtcenter">Vue Téléphone à 320px</h2>
-
-
-
+		<h2 class="desktopG">Vue Desktop > 1370px</h2>
+		<h2 class="desktop">Vue Desktop</h2>
+		<h2 class="tablette">Vue Tablette à 768px à 970px</h2>
+		<h2 class="telephone">Vue Téléphone à 320px</h2>
+		<div class="box">
+			<div class="image">
+				<img src="img/foret.jpg" alt="foret">
+			</div>
+			<div class="image">
+				<img src="img/lac.jpg" alt="lac">
+			</div>
+			<div class="image">
+				<img src="img/mer.jpg" alt="mer">
+			</div>
+			<div class="image">
+				<img src="img/montagne.jpg" alt="montagne">
+			</div>
+		</div>
 	</body>
 </html>
